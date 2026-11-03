@@ -112,6 +112,10 @@ button.tile{cursor:pointer}
 .meta b{color:var(--fg);font-weight:600}
 .card p{margin:0;font-size:14px}
 .card .snap{font-size:13px;color:var(--muted)}
+.flipr{font-size:13px;background:var(--surface2);border-radius:4px;padding:6px 8px;display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 8px}
+.flipr b{font:600 10.5px var(--font-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);flex-basis:100%}
+.flipr .num{font:700 20px/1.1 var(--font-display);color:var(--fg)}
+.flipr em{font-style:normal;color:var(--muted);font-size:12px}
 .said{display:grid;gap:6px}
 .said div{font-size:13.5px;padding:6px 8px;border-radius:4px;min-width:0}
 .said .psa{background:var(--psa-bg)} .said .ns{background:var(--ns-bg)}
@@ -132,7 +136,7 @@ footer li{margin:2px 0;overflow-wrap:anywhere}
   <header>
     <div class="eyebrow">Tuesday, Nov 3, 2026 · all times Eastern</div>
     <h1>Midterm Night Board</h1>
-    <p class="sub">The Senate and House races Pod Save America and Nate Silver have been pointing to: where they are, who is running, what the hosts and Silver said, and what an early result would signal. A briefing, not live results.</p>
+    <p class="sub">The Senate and House races Pod Save America and Nate Silver have been pointing to: where they are, who is running, the latest Silver Bulletin polling average, and what an early result would signal. A briefing, not live results.</p>
   </header>
 
   <section class="topline" aria-label="Where things stand">
@@ -142,31 +146,9 @@ footer li{margin:2px 0;overflow-wrap:anywhere}
     <div class="stat"><div class="eyebrow">Watch live</div><b>5:30 PM</b><span><a href="https://www.natesilver.net/p/election-night-live-with-silver-bulletin" target="_blank" rel="noopener">Silver Bulletin stream</a> with The Argument, GD Politics and Slow Boring.</span></div>
   </section>
 
-  <div class="pods">
-    <section class="panel pod-psa" aria-labelledby="psaH">
-      <h2 id="psaH">What Pod Save America said</h2>
-      <p class="note">Full episodes are audio and partly paywalled, so this draws on episode descriptions, the hosts’ public comments, Dan Pfeiffer’s newsletter and Vote Save America’s target list. Cards marked <b style="color:var(--psa)">PSA</b> carry the race-level detail.</p>
-      <div class="item"><h4>“Last Call for Takes!” <span>Nov 3 · Vietor, Favreau, Lovett</span></h4><p>A pass through the final polls with the case for optimism and pessimism in each battleground, the Haley Stevens drama in Michigan, Roger Marshall’s “desperate ad” in Kansas, and which baseline assumptions might need updating tonight.</p></div>
-      <div class="item"><h4>“What the Final Polls Tell Us” <span>Nov 1 · Vietor with CNN’s Harry Enten</span></h4><p>The growing chance of a Democratic blowout in the House, how far to trust the polls, what to watch Tuesday night, the most nail-biting Senate races, and the surprising states now in play.</p></div>
-      <div class="item"><h4>“Trump Puts the Mid in Midterms” <span>Oct 30 · Favreau, Pfeiffer</span></h4><p>South Carolina tied in the polls, Trump’s “incoherent” case for Sen. Darline Graham, Trump canceling a Kansas rally, and a White House mood they called “grim.”</p></div>
-      <div class="item"><h4>Pfeiffer, Message Box <span>Nov 2</span></h4><p>The final NYT/Siena polls have Democrats leading all seven Senate battlegrounds: up double digits in Michigan, up 7 in Texas, up 5 in Kansas. His caution: <q>even the best pollsters make mistakes.</q></p></div>
-      <div class="item"><h4>Vote Save America targets</h4><p>Crooked’s organizing arm targets 12 Senate races (AK, GA, IA, KS, ME, MI, MS, NE, NH, NC, OH, TX) and 44 House seats. Cards here mark which races are on that list.</p></div>
-    </section>
-
-    <section class="panel pod-ns" aria-labelledby="nsH">
-      <h2 id="nsH">What Nate Silver said</h2>
-      <p class="note">From Silver Bulletin posts and the Still Counting podcast with Galen Druke and Clare Malone (latest episode: “Final Midterms Thoughts + Haley Stevens’ Heel Turn”).</p>
-      <div class="item"><h4>Texas is the hinge</h4><p>If Talarico wins, Democrats flip the Senate about 90% of the time in FLIPR Deluxe. If he loses, they still have decent odds.</p></div>
-      <div class="item"><h4>The Obama-states path</h4><p>Democrats can flip the Senate winning only states Obama carried at least once: North Carolina, Maine, Ohio and Iowa, while holding all their own seats. Exotic extras: Alaska, Kansas, Nebraska, South Carolina, maybe Montana.</p></div>
-      <div class="item"><h4>No safe space</h4><p><q>There’s no ‘Blue Wall’ or anything like that. Except probably for North Carolina, none of the prospective D pickups are ‘safe’ or ‘solid.’</q></p></div>
-      <div class="item"><h4>How much polling error Democrats can absorb</h4><p>His Oct 17 stress test: polls off by 2 points against Democrats everywhere still gives a 52–48 Democratic Senate. At 3 points Maine and Texas flip back and Democrats top out at 50. At 4 points, Republicans hold 52–48.</p></div>
-      <div class="item"><h4>Midterms are less correlated</h4><p>Results may not move in lockstep. <q>I wouldn’t really be that surprised, for instance, if Talarico wins — but Susan Collins wins too.</q></p></div>
-    </section>
-  </div>
-
   <section class="panel" aria-labelledby="sigH">
     <h2 id="sigH">Reading the night, hour by hour</h2>
-    <p class="note">Built from the commentary above plus Decision Desk HQ and NPR. These are guides, not predictions, and closing times are approximate. Wait for AP calls.</p>
+    <p class="note">Built from Pod Save America and Silver Bulletin commentary plus Decision Desk HQ and NPR. These are guides, not predictions, and closing times are approximate. Wait for AP calls.</p>
     <div class="sig"><time>6:00 PM</time><p><b>Kentucky (most), Indiana (most).</b> KY-6 around Lexington is open, Trump +10, and both parties spent six figures there late. A close count is the first hint of how deep the House wave runs.</p></div>
     <div class="sig"><time>7:00 PM</time><p><b>Georgia, Virginia, South Carolina, most of New Hampshire and Florida.</b> DDHQ treats VA-2 (Luria vs. Kiggans) as an early bellwether. Ossoff comfortably over 50% fits a polling environment that is holding. Silver’s SC rule: if Democrats win there, they have likely already won Texas and the Senate.<small>Georgia needs 50% to avoid a January runoff.</small></p></div>
     <div class="sig"><time>7:30 PM</time><p><b>North Carolina, Ohio.</b> Cooper is the one pickup Silver calls close to safe; a tight race would be a warning sign. A Brown win in Ohio keeps the Obama-states path alive.</p></div>
@@ -177,8 +159,8 @@ footer li{margin:2px 0;overflow-wrap:anywhere}
 
   <div class="controls">
     <div class="seg" role="group" aria-label="View">
-      <button id="v-map" aria-pressed="true">Map and list</button>
-      <button id="v-time" aria-pressed="false">By poll close</button>
+      <button id="v-time" aria-pressed="true">By poll close</button>
+      <button id="v-map" aria-pressed="false">Map and list</button>
     </div>
     <div class="seg" role="group" aria-label="Chamber">
       <button data-ch="all" aria-pressed="true">All</button>
@@ -191,14 +173,10 @@ footer li{margin:2px 0;overflow-wrap:anywhere}
       <button data-tag="B" aria-pressed="false">Barometer</button>
       <button data-tag="R" aria-pressed="false">Reach</button>
     </div>
-    <div class="seg" role="group" aria-label="Flagged by">
-      <button data-by="all" aria-pressed="true">Anyone</button>
-      <button data-by="psa" aria-pressed="false">Pod Save America</button>
-      <button data-by="ns" aria-pressed="false">Nate Silver</button>
-    </div>
+    
   </div>
 
-  <section class="mapwrap" id="mapSec" aria-label="State map">
+  <section class="mapwrap" id="mapSec" aria-label="State map" hidden>
     <div class="tiles" id="tiles"></div>
     <div class="legend">
       <span><i class="sw flip"></i>Senate pickup target</span>
@@ -214,7 +192,7 @@ footer li{margin:2px 0;overflow-wrap:anywhere}
 
   <footer>
     <h2>Roles and sources</h2>
-    <p><b>Control</b> races decide the majority. <b>Barometer</b> races close early or count fast, so they give an early read. <b>Reach</b> races aren’t needed for a majority but would signal a very big night. Commentary is paraphrased unless in quotation marks. Maine’s Democratic nominee is Troy Jackson after Graham Platner withdrew in July.</p>
+    <p><b>Control</b> races decide the majority. <b>Barometer</b> races close early or count fast, so they give an early read. <b>Reach</b> races aren’t needed for a majority but would signal a very big night. Silver Bulletin polling averages come from Newsweek’s Nov 2 snapshot (2 PM ET) and earlier reporting where noted; Silver’s district-level House averages are subscriber-only, so House cards show Decision Desk HQ odds and other polls instead. Maine’s Democratic nominee is Troy Jackson after Graham Platner withdrew in July.</p>
     <ul>
       <li><a href="https://crookedmedia.substack.com/p/last-call-for-takes" target="_blank" rel="noopener">Pod Save America, Last Call for Takes! (Nov 3)</a></li>
       <li><a href="https://crooked.com/podcast/what-the-final-polls-tell-us/" target="_blank" rel="noopener">Pod Save America, What the Final Polls Tell Us (Nov 1)</a></li>
@@ -223,6 +201,7 @@ footer li{margin:2px 0;overflow-wrap:anywhere}
       <li><a href="https://votesaveamerica.com/midterms-strategy/" target="_blank" rel="noopener">Vote Save America, Our Midterms Strategy</a></li>
       <li><a href="https://www.foxnews.com/media/pod-save-america-hosts-warn-el-sayed-tone-down-condescension-muslim-brotherhood-questions" target="_blank" rel="noopener">Fox News, PSA hosts on El-Sayed (Oct 20)</a></li>
       <li><a href="https://www.yahoo.com/news/politics/articles/pod-save-america-calls-graham-230014176.html" target="_blank" rel="noopener">Yahoo News, PSA hosts on Platner (July 6)</a></li>
+      <li><a href="https://www.newsweek.com/final-polls-democrats-chances-flip-senate-12651971" target="_blank" rel="noopener">Newsweek, Final polls and Silver Bulletin averages (Nov 2)</a></li>
       <li><a href="https://www.natesilver.net/p/nate-silver-2026-midterm-election-polls-model" target="_blank" rel="noopener">Silver Bulletin, FLIPR final forecast</a></li>
       <li><a href="https://www.natesilver.net/p/the-cognitive-dissonance-election" target="_blank" rel="noopener">Silver Bulletin, The cognitive dissonance election (Oct 30)</a></li>
       <li><a href="https://www.natesilver.net/p/could-haley-stevens-cost-democrats" target="_blank" rel="noopener">Silver Bulletin, Could Haley Stevens cost Democrats the Senate? (Nov 1)</a></li>
@@ -250,6 +229,16 @@ var SEN={NC:"flip",ME:"flip",OH:"flip",TX:"flip",IA:"flip",AK:"flip",GA:"hold",M
 var NAMES={AK:"Alaska",AZ:"Arizona",CA:"California",CO:"Colorado",FL:"Florida",GA:"Georgia",IA:"Iowa",KS:"Kansas",KY:"Kentucky",ME:"Maine",MI:"Michigan",MN:"Minnesota",MS:"Mississippi",MT:"Montana",NC:"North Carolina",NE:"Nebraska",NH:"New Hampshire",NJ:"New Jersey",NY:"New York",OH:"Ohio",PA:"Pennsylvania",SC:"South Carolina",TN:"Tennessee",TX:"Texas",VA:"Virginia",WA:"Washington",WI:"Wisconsin"};
 var T={"6":1080,"7":1140,"7:30":1170,"8":1200,"9":1260,"10":1320,"11":1380,"1":1500};
 function tm(k){return {m:T[k],t:k==="1"?"1:00 AM":(k.indexOf(":")>0?k:k+":00")+" PM"};}
+var FLIPR={
+ AK:["Peltola +2.6 (47.8–45.1)","Nov 2, 2 PM"], IA:["Turek +0.7 (47.3–46.6)","Nov 2, 2 PM"],
+ KS:["Hamilton +3.3 (49.4–46.1)","Nov 2, 2 PM"], OH:["Brown +3.0 (48.3–45.3)","Nov 2, 2 PM"],
+ ME:["Jackson +4.0 (50.3–46.3)","Nov 2, 2 PM"], MI:["El-Sayed +4.7 (49.9–45.2)","Nov 2, 2 PM"],
+ SC:["Graham +1.3 (47.1–45.8)","Nov 2, 2 PM"], TX:["Talarico +3.5 (49.8–46.3)","Nov 2, 2 PM"],
+ NE:["Osborn +0.3","Oct 30 · FLIPR's fuller versions rate it Lean R"],
+ NC:["Cooper +8.5","Sept 7, latest public · ~95% win odds in early Oct"], GA:["Ossoff +8.1","Sept 7, latest public"],
+ MN:["Flanagan +5.0","Sept 7, latest public"], NH:["Pappas +2.9","Sept 7, latest public"],
+ MS:["Not published","no public figure found"], MT:["Not published","three-way race; no public figure found"]
+};
 var VSA="On Vote Save America’s target list.";
 var RACES=[
 {ch:"S",st:"GA",n:"Georgia",d:"Jon Ossoff",r:"Mike Collins",note:"Ossoff is the incumbent",tg:"CB",c:"7",
@@ -490,22 +479,20 @@ var RACES=[
  read:"A clean redistricting payoff, but probably not called tonight."}
 ];
 RACES.forEach(function(r){var x=tm(r.c);r.m=x.m;r.t=x.t;});
-var S={view:"map",ch:"all",tag:"all",by:"all",st:null};
+var S={view:"time",ch:"all",tag:"all",st:null};
 var TAGL={C:"Control",B:"Barometer",R:"Reach"};
 function esc(s){return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");}
-function base(r){return (S.ch==="all"||r.ch===S.ch)&&(S.tag==="all"||r.tg.indexOf(S.tag)>=0)&&(S.by==="all"||(S.by==="psa"?!!r.psa:!!r.ns));}
+function base(r){return (S.ch==="all"||r.ch===S.ch)&&(S.tag==="all"||r.tg.indexOf(S.tag)>=0);}
 function visible(){return RACES.filter(function(r){return base(r)&&(!S.st||r.st===S.st);});}
 function card(r){
   var chips=r.tg.split("").map(function(k){return '<span class="chip '+k+'">'+TAGL[k]+'</span>';}).join("");
   var head=r.ch==="S"?esc(r.n)+'<small>SENATE</small>':esc(r.n)+'<small>HOUSE</small>';
-  var said="";
-  if(r.psa)said+='<div class="psa"><b>Pod Save America</b>'+esc(r.psa)+'</div>';
-  if(r.ns)said+='<div class="ns"><b>Nate Silver</b>'+esc(r.ns)+'</div>';
+  var f=FLIPR[r.ch==="S"?r.st:""],fl="";
+  if(f)fl='<div class="flipr"><b>Silver Bulletin polling average</b><span class="num">'+esc(f[0])+'</span> <em>'+esc(f[1])+'</em></div>';
   return '<article class="card"><div class="top"><h3>'+head+'</h3><div class="chips">'+chips+'</div></div>'+
    '<div class="match"><div><span class="p D">'+(r.d.indexOf("(independent)")>0?"I":"D")+'</span><span>'+esc(r.d)+'</span></div><div><span class="p R">R</span><span>'+esc(r.r)+' <em>· '+esc(r.note)+'</em></span></div></div>'+
-   '<div class="meta">Polls close <b>'+esc(r.t)+' ET</b></div>'+
+   '<div class="meta">Polls close <b>'+esc(r.t)+' ET</b></div>'+fl+
    '<p class="snap">'+esc(r.snap)+'</p><p>'+esc(r.why)+'</p>'+
-   (said?'<div class="said">'+said+'</div>':'')+
    '<div class="read"><b>Read the result</b>'+esc(r.read)+'</div></article>';
 }
 function renderTiles(){
@@ -542,13 +529,13 @@ function render(){
   document.getElementById("out").innerHTML=out;
   document.getElementById("v-map").setAttribute("aria-pressed",S.view==="map");
   document.getElementById("v-time").setAttribute("aria-pressed",S.view==="time");
-  [["ch","data-ch"],["tag","data-tag"],["by","data-by"]].forEach(function(p){
+  [["ch","data-ch"],["tag","data-tag"]].forEach(function(p){
     Array.prototype.forEach.call(document.querySelectorAll("["+p[1]+"]"),function(b){b.setAttribute("aria-pressed",b.getAttribute(p[1])===S[p[0]]);});
   });
 }
 document.getElementById("v-map").onclick=function(){S.view="map";render();};
 document.getElementById("v-time").onclick=function(){S.view="time";S.st=null;render();};
-[["ch","data-ch"],["tag","data-tag"],["by","data-by"]].forEach(function(p){
+[["ch","data-ch"],["tag","data-tag"]].forEach(function(p){
   Array.prototype.forEach.call(document.querySelectorAll("["+p[1]+"]"),function(b){b.onclick=function(){S[p[0]]=b.getAttribute(p[1]);render();};});
 });
 document.getElementById("clearState").onclick=function(){S.st=null;render();};
